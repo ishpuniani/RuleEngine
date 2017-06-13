@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ef0f622-8e54-4eb6-87fc-19518e8eda00" name="Default" comment="RuleEngine 1.1">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/GenerateRules.java" afterPath="$PROJECT_DIR$/src/main/java/GenerateRules.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ImportData.java" afterPath="$PROJECT_DIR$/src/main/java/ImportData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-    </list>
+    <list default="true" id="5ef0f622-8e54-4eb6-87fc-19518e8eda00" name="Default" comment="RuleEngine 1.1" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
