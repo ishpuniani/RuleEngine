@@ -26,14 +26,17 @@ public class DataNode {
     }
 
     private Object getValueFromJsonValue(String jsonValue) throws ParseException {
-        Object value;
-        if(StringUtils.equalsIgnoreCase(jsonValue,"datetime")) {
+        Object value = null;
+        if(StringUtils.equalsIgnoreCase(valueType,"Datetime")) {
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
             value = formatter.parse(jsonValue);
-        } else if(StringUtils.equalsIgnoreCase(jsonValue,"Integer")) {
+            //System.out.println("Datetime parsed: " + value);
+        } else if(StringUtils.equalsIgnoreCase(valueType,"Integer")) {
             value = Float.parseFloat(jsonValue);
-        } else {
+        } else if(StringUtils.equalsIgnoreCase(valueType,"String")){
             value = jsonValue;
+        } else {
+            throw new IllegalStateException("Illegal value type");
         }
         return value;
     }

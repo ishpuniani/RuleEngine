@@ -2,6 +2,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -18,7 +19,7 @@ public class Main {
          */
         try {
             long startTime = new Date().getTime();
-            Map<String,Rule> ruleMap = GenerateRules.generateRulesFromFile();
+            Map<String,List<Rule>> ruleMap = GenerateRules.generateRulesFromFile();
             Set<String> violators = ImportData.importAndValidateData(ruleMap);
             writeToFile(violators);
             System.out.println("Time Taken = " + (new Date().getTime() - startTime) + "ms");
@@ -27,6 +28,10 @@ public class Main {
             System.out.println("Exception Caught");
             throw new RuntimeException(e);
         }
+        /*Object o = new Date();
+        if(o instanceof Date) {
+            System.out.println("Date");
+        }*/
     }
 
     private static void writeToFile(Set<String> violators) {
@@ -44,8 +49,10 @@ public class Main {
             throw new RuntimeException(e);
         } finally {
             try {
-                bufferedWriter.close();
-                fileWriter.close();
+                if(bufferedWriter != null)
+                    bufferedWriter.close();
+                if(fileWriter != null)
+                    fileWriter.close();
             } catch (IOException e) {
                 System.out.println("Exception closing writers");
                 throw new RuntimeException(e);
