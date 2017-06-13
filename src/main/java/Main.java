@@ -39,6 +39,7 @@ public class Main {
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter = null;
         try {
+            //Path to o/p file
             fileWriter = new FileWriter("/Users/Dhruv/Downloads/violators.txt");
             bufferedWriter = new BufferedWriter(fileWriter);
             for(String str : violators) {

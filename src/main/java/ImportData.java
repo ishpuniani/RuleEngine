@@ -20,6 +20,7 @@ public class ImportData {
         //Read file and get data
         Set <String> violators = new HashSet<String>();
         JsonParser jsonParser = new JsonParser();
+        //Path to input file stream
         JsonArray jsonArray = jsonParser.parse(new FileReader("/Users/Dhruv/Downloads/raw_data.json")).getAsJsonArray();
         for(JsonElement jsonElement : jsonArray) {
             JsonObject jsonObject = jsonElement.getAsJsonObject();

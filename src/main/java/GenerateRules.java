@@ -12,6 +12,7 @@ import java.util.Map;
  */
 public class GenerateRules {
 
+    //Path to rule file
     private static final String RULE_FILE = "/Users/Dhruv/Downloads/Rules.txt";
 
     public static Map<String,List<Rule>> generateRulesFromFile() {
